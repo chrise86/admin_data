@@ -72,7 +72,7 @@ module AdminData
 
       elsif !params[:query].blank? || params[:adv_search]
         output << 'Search result:'
-        output << pluralize(records.total_entries, 'record')
+        output << pluralize(records.total_count, 'record')
         output << 'found'
 
       else

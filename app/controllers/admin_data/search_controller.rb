@@ -21,7 +21,7 @@ class SearchAction
 end
 
 module AdminData
-  class SearchController < ApplicationController
+  class SearchController < AdminData::ApplicationController
 
     layout 'search'
 
@@ -48,8 +48,8 @@ module AdminData
       else
         params[:query] = params[:query].strip unless params[:query].blank?
         cond = build_quick_search_condition(@klass, params[:query])
-        h = { :page => params[:page], :per_page => per_page, :order => order, :conditions => cond }
-        @records = @klass.unscoped.paginate(h)
+        h = { :page => params[:page], :per => per_page, :order => order, :conditions => cond }
+        @records = @klass.unscoped.order(order).where(cond).page(params[:page]).per(per_page) 
       end
       respond_to {|format| format.html}
     end

@@ -3,7 +3,7 @@
                                                          :total_num_of_children => @total_num_of_children } %>
 
 <div class="pagination">
-  <%= will_paginate @records, :container => false, :params => {:klass => klass.name.underscore} %>
+  <%= paginate @records, :container => false, :params => {:klass => klass.name.underscore} %>
 </div>
 <div class='clear'></div>
 
@@ -38,7 +38,7 @@
 </table>
 
 <div class="pagination">
-  <%= will_paginate @records, :container => false, :params => {:klass => klass.name.underscore} %>
+  <%= paginate @records, :container => false, :params => {:klass => klass.name.underscore} %>
 </div>
 
 <div class='clear'></div>
