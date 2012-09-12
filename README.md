@@ -1,4 +1,6 @@
-# admin_data
+# admin_data - kaminari
+
+**This fork has been updated to use Kaminari** 
 
 ## Rails 3.0.x
 
