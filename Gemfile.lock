@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    admin_data (1.2.1)
+    admin_data (1.2.1k)
       kaminari
       rails (~> 3.1)
 
